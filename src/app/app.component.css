@@ -1,0 +1,220 @@
+﻿/* -------------- HEADER STYLES --------------------*/
+input, button {
+    border: transparent;
+    font-size: 24px;
+    outline: none;
+}
+
+input {
+    background: #e0e0e0;
+    color: tomato;
+    font-family: 'Inconsolata', monospace;
+}
+
+button {
+    background: tomato;
+    border-radius: 4px;
+    color: #422;
+    font-family: 'Lobster', cursive;
+}
+
+.intro {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.delay {
+    color: tomato;
+}
+/* -------------- END HEADER STYLES --------------------*/
+
+
+/* -------------- MAIN GRID STYLES ---------------- */
+.people {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 25px;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.people:not(.loaded) {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.people > div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 500px;
+}
+
+h2 {
+    color: tomato;
+    font-family: 'Lobster', cursive;
+    font-size: 52px;
+    margin: 10px;
+}
+
+/* -------------- END OF MAIN GRID STYLES ---------------- */
+
+/* -------------- GRID ITEM STYLES ---------------- */
+
+.person-listing {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 462px;
+    transition: background .5s;
+    width: 400px;
+}
+
+.person-listing:hover {
+    background: #e0e0e0;
+    transition: background .5s;
+}
+
+img {
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    height: 250px;
+    width: 250px;
+    z-index: 1;
+}
+
+h3 {
+    color: #e0e0e0;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 22px;
+}
+
+p {
+    font-family: 'Inconsolata', monospace;
+    font-size: 16px;
+    margin: 12px;
+}
+
+.info {
+    align-items: center;
+    bottom: 114px;
+    color: transparent;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: color .1s, bottom .25s;
+    z-index: 0;
+}
+
+.hovered h3 {
+    color: tomato;
+}
+
+.hovered .info {
+    bottom: 0;
+    color: tomato;
+    transition: color .75s, bottom .5s;
+}
+
+/* -------------- END OF GRID ITEM STYLES ---------------- */
+
+/* -------------- LOADING COMPONENT PLACEMENT -------------*/
+
+.loading-component:not(.loaded) {
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: 190px;
+    transition: opacity 1s;
+}
+
+.loading-component.loaded {
+    opacity: 0;
+}
+
+/* -----------END OF LOADING COMPONENT PLACEMENT ----------*/
+
+.afterFirstLoad {
+    align-items: center;
+    background: transparent;
+    color: tomato;
+    display: flex;
+    flex-direction: column;
+}
+
+.loaded .afterFirstLoad {
+    display: none;
+}
+
+
+/******** AND SOME HACKY CSS FOR GOOD MEASURE ************/
+.playground {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.playground.loaded {
+    display: none;
+}
+
+svg {
+    position: absolute;
+}
+
+svg circle {
+    fill: none;
+}
+
+.tomato circle {
+    stroke: tomato;
+}
+
+.tomato path {
+    fill: tomato;
+}
+
+.gold circle {
+    stroke: gold;
+}
+
+.gold path {
+    fill: gold;
+}
+
+.palegreen circle {
+    stroke: palegreen;
+}
+
+.palegreen path {
+    fill: palegreen;
+}
+
+.steelblue circle {
+    stroke: steelblue;
+}
+
+.steelblue path {
+    fill: steelblue;
+}
+
+.purple circle {
+    stroke: purple;
+}
+
+.purple path {
+    fill: purple;
+}
+
+.white circle {
+    stroke: white;
+}
+
+.white path {
+    fill: white;
+}
